@@ -1,0 +1,31 @@
+{
+  "title": "Google Calendar Colors",
+  "config": {
+    "step": {
+      "calendar": {
+        "title": "Choose the calendar",
+        "description": "Match one Google calendar to its existing Home Assistant calendar entity.",
+        "data": {
+          "calendar_id": "Google calendar",
+          "entity_id": "Home Assistant calendar entity"
+        }
+      }
+    },
+    "abort": {
+      "cannot_connect": "Could not connect to Google Calendar.",
+      "entity_already_configured": "That Home Assistant calendar entity already has a color source configured.",
+      "no_calendars": "No readable Google calendars were found."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Google Calendar Colors options",
+        "data": {
+          "refresh_interval": "Metadata refresh interval",
+          "diagnostics": "Enable extended diagnostics counters"
+        }
+      }
+    }
+  }
+}

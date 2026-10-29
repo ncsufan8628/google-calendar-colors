@@ -1,0 +1,29 @@
+{
+  "name": "google-calendar-colors-week-planner-card",
+  "version": "1.0.0",
+  "description": "A Google-event-color-aware, backward-compatible week-planner-card distribution.",
+  "type": "module",
+  "source": "src/index.js",
+  "module": "dist/week-planner-card.js",
+  "targets": {
+    "module": {
+      "includeNodeModules": true,
+      "optimize": true
+    }
+  },
+  "scripts": {
+    "build": "parcel build && node scripts/copy-dist.js",
+    "test": "node --test tests/frontend/*.test.js",
+    "check": "npm test && npm run build"
+  },
+  "dependencies": {
+    "lit": "^3.1.2",
+    "luxon": "^3.4.4"
+  },
+  "devDependencies": {
+    "@parcel/optimizer-data-url": "^2.12.0",
+    "@parcel/transformer-inline-string": "^2.11.0",
+    "parcel": "^2.16.3",
+    "svgo": "^3.3.2"
+  }
+}
