@@ -1,5 +1,9 @@
 # Google Calendar Colors for Week Planner
 
+> [!IMPORTANT]
+> This is a personal project provided as-is. No support, feature requests,
+> compatibility guarantees, or maintenance commitments are offered.
+
 Google Calendar Colors is a HACS-installable Home Assistant custom integration plus a
 color-aware distribution of `week-planner-card`. It keeps the built-in Google Calendar
 entities intact while allowing one calendar entry to opt into Google's per-event legacy
