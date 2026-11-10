@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+from collections.abc import Mapping
 from typing import Any, override
 
 import probatio
@@ -64,6 +65,12 @@ class OAuth2FlowHandler(
             "access_type": "offline",
             "prompt": "consent",
         }
+
+    async def async_step_reauth(
+        self, entry_data: Mapping[str, Any]
+    ) -> ConfigFlowResult:
+        """Restart OAuth for an existing config entry."""
+        return await self.async_step_user()
 
     async def _async_load_calendars(self, access_token: str) -> list[dict[str, str]]:
         session = async_get_clientsession(self.hass)

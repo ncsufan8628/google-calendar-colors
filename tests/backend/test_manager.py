@@ -175,3 +175,11 @@ def test_oauth_requests_use_home_assistant_refreshing_session():
     assert "self._oauth_session.async_request" in source
     assert "access_token" not in source
 
+
+def test_oauth_config_flow_supports_reauthentication():
+    source = (ROOT / "config_flow.py").read_text()
+    assert "async def async_step_reauth(" in source
+    assert "return await self.async_step_user()" in source
+    assert "self.source == SOURCE_REAUTH" in source
+    assert "self.async_update_reload_and_abort(" in source
+

@@ -1,7 +1,7 @@
 {
   "domain": "google_calendar_colors",
   "name": "Google Calendar Colors",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "config_flow": true,
   "dependencies": ["application_credentials", "http", "websocket_api"],
   "documentation": "https://github.com/ncsufan8628/google-calendar-colors",
