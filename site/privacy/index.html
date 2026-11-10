@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Privacy policy for Calendar Colors for Home Assistant.">
+    <title>Privacy Policy · Calendar Colors</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+  </head>
+  <body class="policy-page">
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Calendar Colors home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Calendar Colors</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="../#how-it-works">How it works</a>
+        <a aria-current="page" href="./">Privacy</a>
+        <a href="../terms/">Terms</a>
+      </nav>
+    </header>
+
+    <main class="policy-shell">
+      <aside class="policy-intro">
+        <p class="eyebrow">Policy</p>
+        <h1>Privacy,<br>without surprises.</h1>
+        <p>Effective November 10, 2026</p>
+        <div class="policy-summary">
+          <strong>In one sentence</strong>
+          <p>Google Calendar data is used only inside the owner’s Home Assistant instance to display event colors.</p>
+        </div>
+      </aside>
+
+      <article class="policy-content">
+        <section>
+          <h2>1. Scope</h2>
+          <p>This policy describes Calendar Colors for Home Assistant, a private, owner-operated integration that connects a Home Assistant installation to Google Calendar. The public informational site does not provide accounts or process calendar data.</p>
+        </section>
+
+        <section>
+          <h2>2. Google data accessed</h2>
+          <p>The integration requests the <code>calendar.readonly</code> OAuth scope. Google may return calendars the authorizing account can read, calendar metadata, event records, recurrence and time identifiers, event color identifiers, custom label identifiers and colors, and synchronization tokens.</p>
+          <p>The integration does not request permission to create, modify, share, or delete calendars or events.</p>
+        </section>
+
+        <section>
+          <h2>3. How Google data is used</h2>
+          <p>Google data is used solely to match Google Calendar events with events already displayed by Home Assistant and to resolve the correct event color. The browser companion receives only limited identity, timing, recurrence, color, and color-source metadata needed for that match. It does not receive event titles, descriptions, locations, attendees, email addresses, label names, or the Google calendar identifier through the companion color API.</p>
+          <p>Google user data is not used for advertising, profiling, eligibility decisions, or training machine-learning models.</p>
+        </section>
+
+        <section>
+          <h2>4. Storage and retention</h2>
+          <p>OAuth tokens and configuration are stored by the owner’s Home Assistant installation. Event responses and synchronization state are cached temporarily in that installation’s memory to reduce Google API requests and are discarded when Home Assistant restarts. The integration does not operate an external database or developer-controlled application server.</p>
+        </section>
+
+        <section>
+          <h2>5. Sharing and disclosure</h2>
+          <p>The integration communicates directly between the owner’s Home Assistant installation and Google’s APIs. It does not transmit Google Calendar data to the application developer, sell it, or share it with advertisers or data brokers.</p>
+          <p>Within Home Assistant, limited color metadata is available only to authenticated users who already have permission to read the configured calendar entity.</p>
+        </section>
+
+        <section>
+          <h2>6. Security</h2>
+          <p>The integration uses Home Assistant’s OAuth storage and authenticated WebSocket permissions. Tokens are not written to application logs or committed to the public source repository. No security method can guarantee absolute protection, so the Home Assistant owner remains responsible for securing their installation and Google Cloud credentials.</p>
+        </section>
+
+        <section>
+          <h2>7. Your control</h2>
+          <p>Access can be stopped at any time by removing the Calendar Colors integration in Home Assistant, deleting its application credentials, or revoking the application from the Google Account’s third-party access settings. Removing the integration deletes its Home Assistant configuration and ends future Google API access.</p>
+        </section>
+
+        <section>
+          <h2>8. Website data</h2>
+          <p>This informational website uses no accounts, analytics, advertising, tracking pixels, local storage, or cookies. Standard infrastructure logs may be processed temporarily by the hosting provider for security and reliable delivery.</p>
+        </section>
+
+        <section>
+          <h2>9. Children</h2>
+          <p>The integration is a private home-automation utility and is not directed to children or offered as a public consumer service.</p>
+        </section>
+
+        <section>
+          <h2>10. Changes and contact</h2>
+          <p>Material changes will be reflected on this page with a revised effective date. Privacy questions may be sent to the developer contact address displayed on the Google OAuth consent screen.</p>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <p>Calendar Colors for Home Assistant</p>
+      <p><a href="../">Home</a> · <a href="../terms/">Terms of use</a></p>
+      <p class="affiliation">Not affiliated with Google LLC or the Home Assistant project.</p>
+    </footer>
+  </body>
+</html>

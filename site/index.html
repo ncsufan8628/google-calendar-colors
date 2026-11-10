@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Privacy and data-use information for Calendar Colors for Home Assistant."
+    >
+    <title>Calendar Colors for Home Assistant</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Calendar Colors home">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span>Calendar Colors</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#how-it-works">How it works</a>
+        <a href="./privacy/">Privacy</a>
+        <a href="./terms/">Terms</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Private Home Assistant utility</p>
+          <h1>Calendar colors,<br><em>where they belong.</em></h1>
+          <p class="lede">
+            Calendar Colors is a read-only companion for Home Assistant. It
+            retrieves Google Calendar color metadata and applies the exact event
+            colors inside a locally operated dashboard.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="#data-use">See how data is used</a>
+            <a class="button secondary" href="./privacy/">Read the privacy policy</a>
+          </div>
+          <p class="owner-note">
+            This public page documents data use. The application itself is a
+            private, owner-operated integration and does not offer public accounts.
+          </p>
+        </div>
+
+        <div class="calendar-visual" aria-label="Illustration of color-coded calendar events">
+          <div class="visual-topline">
+            <span>Family calendar</span>
+            <span class="live-dot">Read only</span>
+          </div>
+          <div class="week-labels" aria-hidden="true">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span>
+          </div>
+          <div class="calendar-grid" aria-hidden="true">
+            <div class="event coral" style="--row: 2; --column: 1 / 3">School pickup</div>
+            <div class="event gold" style="--row: 4; --column: 2 / 4">Dinner</div>
+            <div class="event blue" style="--row: 6; --column: 3 / 5">Appointment</div>
+            <div class="event green" style="--row: 8; --column: 4 / 6">Family time</div>
+          </div>
+          <div class="visual-caption">
+            <span class="shield" aria-hidden="true">✓</span>
+            Processed inside Home Assistant
+          </div>
+        </div>
+      </section>
+
+      <section class="principles" aria-label="Privacy principles">
+        <article>
+          <span class="number">01</span>
+          <h2>Read only</h2>
+          <p>The integration requests Google Calendar read access. It cannot create, edit, or delete events.</p>
+        </article>
+        <article>
+          <span class="number">02</span>
+          <h2>Locally processed</h2>
+          <p>Calendar responses are processed by the owner’s Home Assistant instance, not by a hosted application server.</p>
+        </article>
+        <article>
+          <span class="number">03</span>
+          <h2>No commercial use</h2>
+          <p>Calendar data is not sold, used for advertising, or shared with the application developer.</p>
+        </article>
+      </section>
+
+      <section class="content-section" id="how-it-works">
+        <div class="section-heading">
+          <p class="eyebrow">How it works</p>
+          <h2>A short, direct data path</h2>
+          <p>Authorization connects Google directly to the Home Assistant instance that requested access.</p>
+        </div>
+        <ol class="data-path">
+          <li>
+            <span class="step-icon">G</span>
+            <div><strong>Google Calendar</strong><small>Returns authorized calendar and color metadata</small></div>
+          </li>
+          <li>
+            <span class="connector" aria-hidden="true">→</span>
+            <span class="step-icon home">H</span>
+            <div><strong>Home Assistant</strong><small>Matches event identity and resolves its display color</small></div>
+          </li>
+          <li>
+            <span class="connector" aria-hidden="true">→</span>
+            <span class="step-icon display">▦</span>
+            <div><strong>Local dashboard</strong><small>Receives only the metadata needed to render colors</small></div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="content-section split" id="data-use">
+        <div class="section-heading">
+          <p class="eyebrow">Data use</p>
+          <h2>Narrow access for one purpose</h2>
+        </div>
+        <div class="details-grid">
+          <article class="detail-card">
+            <h3>What is accessed</h3>
+            <p>Readable calendar metadata and event records required to associate Google’s event and label colors with existing Home Assistant calendar events.</p>
+          </article>
+          <article class="detail-card">
+            <h3>Why it is accessed</h3>
+            <p>Only to reproduce the calendar owner’s chosen event colors on a local Home Assistant dashboard.</p>
+          </article>
+          <article class="detail-card">
+            <h3>Where it is stored</h3>
+            <p>OAuth credentials remain in Home Assistant. Working event data is held temporarily in local memory and is discarded when Home Assistant restarts.</p>
+          </article>
+          <article class="detail-card">
+            <h3>How to revoke access</h3>
+            <p>Remove the integration in Home Assistant or revoke the application from the Google Account’s third-party access settings.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="policy-callout">
+        <div>
+          <p class="eyebrow">Plain-language policies</p>
+          <h2>Nothing hidden in the fine print.</h2>
+          <p>The site uses no analytics, advertising, tracking scripts, accounts, or cookies.</p>
+        </div>
+        <div class="policy-links">
+          <a href="./privacy/">Privacy policy <span aria-hidden="true">↗</span></a>
+          <a href="./terms/">Terms of use <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Calendar Colors for Home Assistant</p>
+      <p>Private, read-only, and locally operated.</p>
+      <p class="affiliation">Not affiliated with Google LLC or the Home Assistant project.</p>
+    </footer>
+  </body>
+</html>
